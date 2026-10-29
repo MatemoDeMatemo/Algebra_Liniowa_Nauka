@@ -141,3 +141,47 @@ matrix2 = np.array([[1, 2],[3, 4]])
 matrix3 = np.array([[1, 2],[3, -1]])
 print("Czy macierz nr 1 i 2 sa rowne? : \n", np.array_equal(matrix1, matrix2))
 print("Czy macierz nr 1 i 3 sa rowne? : \n", np.array_equal(matrix1, matrix3))
+
+
+# ########################################################################################################################
+##### 3] Wlasciwosci Operacji na Macierzach w Python #####
+
+print("##### 3] Wlasciwosci Operacji na Macierzach w Python #####", "\n")
+
+# Nieprzemiennosc mnozenia macierzy
+matrix1 = np.array([[1, 2], [4, 5]])
+matrix2 = np.array([[2, 4], [6, 8]])
+print("Wynik mnozenia matrix1 @ matrix2:\n", matrix1 @ matrix2, "\n")
+print("Wynik mnozenia matrix2 @ matrix1:\n", matrix2 @ matrix1, "\n")
+
+# Mnozenie macierzy z lewej strony - skalowanie wierszy
+matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+L = np.array([[2, 0, 0], [0, 3, 0], [0, 0, 4]])
+print("Wynik mnozenia macierzy L @ matrix (skalowanie wierszy):\n", L @ matrix, "\n")
+
+# Mnozenie macierzy z prawej strony - skalowanie kolumn
+matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+R = np.array([[2, 0, 0], [0, 3, 0], [0, 0, 4]])
+print("Wynik mnozenia macierzy matrix @ R (skalowanie kolumn):\n", matrix @ R, "\n")
+
+# Mnozenie przez macierz jednostkowa
+matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+I = np.array([[1, 0, 0], [0, 1, 0], [0, 0, 1]])
+print("Wynik mnozenia macierzy przez macierz jednostkowa:\n", matrix @ I, "\n")
+
+# Obracanie kolejnosci wierszy i kolumn
+matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+O = np.array([[0, 0, 1], [0, 1, 0], [1, 0, 0]])
+print("Wynik mnozenia matrix @ O (zmiana kolejnosci kolumn):\n", matrix @ O, "\n")
+print("Wynik mnozenia O @ matrix (zmiana kolejnosci wierszy):\n", O @ matrix, "\n")
+
+# Mnozenie przez nietypowa macierz
+matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+N = np.array([[1, 0, 0], [0, 1, 0], [0, 0, 0]])
+print("Wynik 1 mnozenia macierzy przez nietypowa macierz N:\n", matrix @ N, "\n")
+
+# Mnozenie przez nietypowa macierz
+matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+N = np.array([[1, 0, 0], [0, 0, 1], [0, 0, 0]])
+print("Wynik 2 mnozenia macierzy przez nietypowa macierz N:\n", matrix @ N, "\n")
+
