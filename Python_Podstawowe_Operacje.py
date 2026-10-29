@@ -123,7 +123,7 @@ matrix1 = np.array([[1, 2],
 
 matrix2 = np.array([[2, 3],
                    [4, 5]])
-#
+
 print("Wynik mnozenia odpowiadajacych sobie elementow w dwoch macierzach: \n", matrix1 * matrix2, "\n") # Udawane mnozenie - mnoza sie odpowiadajace sobie elementy
 print("Wynik skroconego zapisu mnozenia macierzy: \n", matrix1 @ matrix2, "\n")                         # Poprawne mnozenie Macierzy
 
